@@ -60,41 +60,6 @@
                                 </value>
                               </block>
                             </value>
-                            <next>
-                              <block type="controls_repeat" id="115" inline="true">
-                                <value name="TIMES">
-                                  <block type="variables_get" id="122">
-                                    <field name="VAR">stepCount</field>
-                                  </block>
-                                </value>
-                                <statement name="DO">
-                                  <block type="movement_reverse" id="141">
-                                    <next>
-                                      <block type="robot_delay" id="142" inline="true">
-                                        <value name="DELAY">
-                                          <block type="math_number" id="143">
-                                            <field name="NUM">100</field>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="movement_stop" id="153">
-                                            <next>
-                                              <block type="robot_delay" id="154" inline="true">
-                                                <value name="DELAY">
-                                                  <block type="math_number" id="155">
-                                                    <field name="NUM">100</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </statement>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
@@ -106,7 +71,42 @@
           </block>
         </statement>
         <next>
-          <block type="movement_stop" id="165"></block>
+          <block type="controls_repeat" id="115" inline="true">
+            <value name="TIMES">
+              <block type="variables_get" id="122">
+                <field name="VAR">stepCount</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_reverse" id="141">
+                <next>
+                  <block type="robot_delay" id="142" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="143">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_stop" id="153">
+                        <next>
+                          <block type="robot_delay" id="154" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="155">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="movement_stop" id="165"></block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
